@@ -15,16 +15,16 @@ function displayData(data){
 
 displayData(tableData)
 
-var inputText = d3.select("#datetime")
+var inputDate = d3.select("#datetime")
 var button = d3.select("filter-btn")
 
 // filter data with date
 function dateChange(){
     d3.event.preventDefault();
-    var newTable = tableData.filter(sighting => sighting.datetime===inputText.property("value"))
+    var newTable = tableData.filter(sighting => sighting.datetime===inputDate.property("value"))
     displayData(newTable)
 }
 
 // event listener to handle change and click
-inputText.on("change", dateChange)
+inputDate.on("change", dateChange)
 button.on("click", dateChange)
