@@ -25,6 +25,6 @@ function dateChange(){
     displayData(newTable)
 }
 
-// event listener to handle change and click
+// event listeners to handle change and click
 inputDate.on("change", dateChange)
 button.on("click", dateChange)
